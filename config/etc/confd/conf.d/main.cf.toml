@@ -1,0 +1,11 @@
+[template]
+src   = "main.cf.tmpl"
+dest  = "/etc/postfix/main.cf"
+owner = "root"
+group = "root"
+mode  = "0644"
+keys = [
+  "/relay/domains",
+]
+check_cmd = "/usr/sbin/postfix check"
+reload_cmd = "supervisorctl restart postfix"
