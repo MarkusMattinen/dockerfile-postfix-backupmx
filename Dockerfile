@@ -1,5 +1,5 @@
-# postfix, confd and supervisord on trusty
-FROM markusma/confd:0.8.0
+# Postfix, confd and supervisord on Ubuntu Trusty
+FROM markusma/confd:0.9
 
 RUN apt-get update \
  && apt-get install -y --no-install-recommends postfix busybox-syslogd \
